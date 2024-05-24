@@ -1,4 +1,5 @@
-import { Box, Container, VStack, Text, Image, Flex, Heading, Link, SimpleGrid, Button } from "@chakra-ui/react";
+import { Box, Container, VStack, Text, Image, Flex, Heading, Link, SimpleGrid, Button, Input, InputGroup, InputRightElement, IconButton } from "@chakra-ui/react";
+import { FaSearch } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Index = () => {
@@ -8,6 +9,16 @@ const Index = () => {
       <Box as="nav" bg="blue.800" color="white" p={4}>
         <Flex justify="space-between" align="center" maxW="container.lg" mx="auto">
           <Heading size="lg">ElectroShop</Heading>
+          <InputGroup maxW="400px" mx={2}>
+            <Input placeholder="Search products..." />
+            <InputRightElement>
+              <IconButton
+                aria-label="Search"
+                icon={<FaSearch />}
+                onClick={() => console.log("Search clicked")}
+              />
+            </InputRightElement>
+          </InputGroup>
           <Flex>
             <Link href="#" mx={2}>Home</Link>
             <Link href="#" mx={2}>Products</Link>
